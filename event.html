@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+  <style>
+    .addClass {
+      font-size: 30px;
+      background-color: red;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <p class="event">
+
+  </p>
+  <button class="btn">I am a button</button>
+  <script>
+    const paragraph = document.querySelector('.event');
+    const btn = document.querySelector('.btn');
+    paragraph.innerText = 'I\'m a newly created paragraph';
+    const onHoverBtn = ()=>{
+    paragraph.classList.add('addClass');
+    }
+    const onMouseOut = ()=>{
+    paragraph.classList.remove('addClass');
+    }
+
+    btn.addEventListener('mouseover', onHoverBtn);
+
+    btn.addEventListener('mouseout', onMouseOut);
+    
+  </script>
+</body>
+</html>
